@@ -538,4 +538,6 @@ img {
   margin-left: auto;
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 8px;
 }
