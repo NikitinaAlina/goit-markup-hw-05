@@ -50,14 +50,33 @@ img {
   font-weight: 500;
   color: #2e2f42;
   text-decoration: none;
+  position: relative;
+  transition: color 250ms linear;
 }
 .link-item:hover,
 .link-item:focus {
   color: #404bbf;
 }
+.link-item.active::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #404bbf;
+  border-radius: 2px;
+  position: absolute;
+  left: 0px;
+  top: 42px;
+}
 .contact menu {
   text-decoration: none;
 }
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .hidden {
   position: absolute;
   width: 1px;
@@ -70,10 +89,12 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .contact-mail,
 .contact-number {
   font-style: normal;
   color: #434455;
+  transition: color 250ms linear;
 }
 .contact-mail:hover,
 .contact-mail:focus {
@@ -92,6 +113,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
 .header-portfoloi {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -163,6 +185,7 @@ img {
   border: none;
   display: block;
   margin: 0 auto;
+  transition: color 250ms linear;
 }
 .btn:hover,
 .btn:focus {
@@ -191,6 +214,7 @@ img {
   text-align: center;
   justify-content: center;
   margin-bottom: 72px;
+  transition: color 250ms linear;
 }
 .potfolio-button:hover {
   background: #404bbf;
@@ -205,7 +229,26 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
+.portfolio-overlay {
+  color: #f4f4fd;
+  background: #4d5ae5;
+  padding: 40px 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  overflow: auto;
+}
+.list-pic:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+.box-portfolio {
+  position: relative;
+  overflow: hidden;
+}
 .list-portfolio {
   flex-wrap: wrap;
   row-gap: 48px;
@@ -219,6 +262,7 @@ img {
 .list-pic {
   width: calc((100% - 48px) / 3);
 }
+
 .list-pic-link:hover,
 .list-pic-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -324,6 +368,7 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: color 250ms linear;
 }
 
 .team-item {
@@ -381,6 +426,7 @@ img {
   width: 100%;
   color: #8e8f99;
   height: 100%;
+  transition: color 250ms linear;
 }
 .icon {
   fill: currentColor;
@@ -452,6 +498,7 @@ img {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: color 250ms linear;
 }
 .footer-content {
   display: flex;
@@ -462,4 +509,33 @@ img {
 }
 .media-box {
   margin-left: 120px;
+}
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal {
+  max-width: 408px;
+  max-height: 576px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+.modal-close {
+  display: block;
+  margin-left: auto;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
