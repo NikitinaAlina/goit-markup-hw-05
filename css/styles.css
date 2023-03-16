@@ -58,6 +58,9 @@ img {
 .link-item:focus {
   color: #404bbf;
 }
+.active {
+  color: #404bbf;
+}
 .link-item.active::after {
   content: '';
   width: 100%;
