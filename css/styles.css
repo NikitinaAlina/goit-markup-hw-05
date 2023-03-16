@@ -52,6 +52,7 @@ img {
   text-decoration: none;
   position: relative;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-item:hover,
 .link-item:focus {
@@ -95,6 +96,7 @@ img {
   font-style: normal;
   color: #434455;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-mail:hover,
 .contact-mail:focus {
@@ -186,6 +188,7 @@ img {
   display: block;
   margin: 0 auto;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
@@ -207,6 +210,8 @@ img {
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-butn {
   display: flex;
@@ -215,6 +220,7 @@ img {
   justify-content: center;
   margin-bottom: 72px;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .potfolio-button:hover {
   background: #404bbf;
@@ -240,9 +246,10 @@ img {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
 }
-.list-pic:hover .portfolio-overlay {
+.list-pic-link:hover .portfolio-overlay {
   transform: translateY(0);
 }
 .box-portfolio {
@@ -305,6 +312,8 @@ img {
 }
 .list-pic-link {
   display: block;
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-menu,
@@ -368,7 +377,8 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
-  transition: color 250ms linear;
+  transition: background-color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-item {
@@ -427,6 +437,7 @@ img {
   color: #8e8f99;
   height: 100%;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon {
   fill: currentColor;
@@ -498,7 +509,8 @@ img {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: color 250ms linear;
+  transition: background-color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-content {
   display: flex;
@@ -518,6 +530,7 @@ img {
   top: 0;
   left: 0;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   max-width: 408px;
@@ -533,6 +546,7 @@ img {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
   display: block;
@@ -543,6 +557,7 @@ img {
   padding: 8px;
   cursor: pointer;
   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:hover,
 .modal-close:focus {
